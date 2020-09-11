@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2051-7</title>
+  
+  
+  
+  
+<style>
+body {
+  color:black;
+  background-color: lightgrey;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flogotypes101.com%2Flogos%2F107%2FF690F4054623AFD396693412598CDC3B%2Fmtg_elements.png&f=1&nofb=1")
+}
+
+ol{
+  color:black;
+}
+
+.correct {
+  background: green;
+}
+
+.incorrect{
+  background: red;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <img src="https://media.wizards.com/2018/images/daily/gcYrmy5q9f.png" alt="math image" width="200"/>
+<h1>Gary's Math Quiz</h1>
+<ol>
+  <li> What's the name of the color combination blue/white? <input  data-correct="Azorius"/></li>
+  <li>6 / 3 <input  data-correct="2"/></li>
+  <li>What is the square root of 16? <input data-correct="4"/></li>
+    <li>Who is the President? <input data-correct="Trump"/></li>
+</ol>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  
+      <script id="rendered-js" >
+console.clear();
+console.log("Hello world")
+$("input").change(onChange)
+
+function onChange(evt){
+  let correct = $(this).data("correct");
+  let response = $(this).val();
+  correct = correct.toUpperCase();
+  response = response.toUpperCase();
+
+  console.log(correct,response);
+  if(correct == response){
+   $(this).removeClass('incorrect').addClass('correct');
+  } else{
+    $(this).removeClass('correct').addClass('incorrect');
+  }
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
